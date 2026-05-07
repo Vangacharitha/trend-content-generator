@@ -2,8 +2,9 @@
 
 An AI-powered automation platform that converts live trending news into engaging social media content using **Groq AI**, **n8n**, and **Streamlit**.
 
-🌐 **Live Demo:**  
-https://trend-content-generator-xdlowpbqsb3jc6fwsi4sfi.streamlit.app/
+## 🌐 Live Application
+
+[![Live App](https://img.shields.io/badge/🚀%20Open-Live%20App-green?style=for-the-badge)](https://trend-content-generator-xdlowpbqsb3jc6fwsi4sfi.streamlit.app/)
 
 ---
 
