@@ -1,43 +1,47 @@
 # 🔥 Trend Content Generator
 
-An automated content orchestration platform that transforms live news trends into high-engagement social media kits using **Groq AI**, **n8n**, and **Streamlit**.
+An AI-powered automation platform that converts live trending news into engaging social media content using **Groq AI**, **n8n**, and **Streamlit**.
+
+🌐 **Live Demo:**  
+https://trend-content-generator-xdlowpbqsb3jc6fwsi4sfi.streamlit.app/
 
 ---
 
-## 🚀 Overview
+# 🚀 Overview
 
-The **Trend Content Generator** monitors live RSS feeds to identify breaking trends, summarizes them using AI, and automatically generates tailored content for multiple social media platforms.
+Trend Content Generator automatically fetches real-time trending news from RSS feeds and transforms them into ready-to-post social media content for platforms like:
 
-### ✨ Key Features
+- LinkedIn
+- Instagram
+- Twitter/X
 
-- 📰 **Real-time Trend Ingestion**  
-  Fetches the latest global trends using RSS feeds.
-
-- ⚡ **Groq AI Integration**  
-  Uses Groq's ultra-fast LPU inference for instant AI-generated outputs.
-
-- 📱 **Multi-Platform Content Kits**  
-  Generates:
-  - LinkedIn posts
-  - Instagram captions
-  - Twitter/X posts
-  - Hashtags
-  - AI summaries
-
-- ⏱️ **Smart Rate Limiting**  
-  Built-in workflow buffers to handle API quota limits smoothly.
+The workflow is powered by **n8n automation** and **Groq LLMs**, enabling ultra-fast AI content generation with a lightweight frontend built in Streamlit.
 
 ---
 
-## 🛠️ Tech Stack
+# ✨ Features
 
-| Layer | Technology |
+- 📰 Live RSS Trend Fetching
+- ⚡ Ultra-Fast Groq AI Processing
+- 🤖 Automated AI Content Generation
+- 📱 Platform-Specific Social Media Posts
+- 🏷️ Smart Hashtag Generation
+- 🔄 n8n Workflow Automation
+- 🌐 Streamlit Cloud Deployment
+- 📦 Structured JSON Response Handling
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
 |---|---|
-| Frontend | Streamlit (Python) |
-| Backend Workflow | n8n |
-| AI Engine | Groq (Llama-3 / Mixtral) |
-| Data Source | RSS Feeds |
-| Communication | REST API / Webhooks |
+| Streamlit | Frontend UI |
+| n8n | Workflow Automation |
+| Groq AI | AI Content Generation |
+| RSS Feed | Live Trend Source |
+| Python | Frontend Logic |
+| JavaScript | JSON Formatting |
 
 ---
 
@@ -49,77 +53,86 @@ The **Trend Content Generator** monitors live RSS feeds to identify breaking tre
 Receives requests from the Streamlit frontend.
 
 ### Live News Fetcher
-Collects trending headlines from RSS feeds in real-time.
+Fetches trending headlines from live RSS feeds.
 
 ---
 
 ## 2️⃣ AI Processing
 
 ### Rate Limit Buffer
-Prevents excessive API requests to Groq.
+Controls API request flow to avoid quota issues.
 
 ### AI Content Orchestrator
-Processes trending news and generates:
-- Title
-- Summary
-- LinkedIn content
-- Instagram caption
-- Twitter/X post
-- Relevant hashtags
+Processes news data using Groq LLMs and generates:
+
+- Content Title
+- AI Summary
+- Social Media Posts
+- Hashtags
 
 ---
 
 ## 3️⃣ Data Output
 
-### JavaScript Formatter Node
-Formats and cleans the JSON response.
+### JavaScript Formatter
+Cleans and structures the AI response into JSON format.
 
-### Frontend Response
-Returns generated content back to Streamlit UI.
+### Frontend Success Return
+Returns generated content back to the Streamlit interface.
 
 ---
 
 # 📂 Project Structure
 
 ```plaintext
-├── app.py              # Streamlit frontend logic
-├── requirements.txt    # Python dependencies
-├── assets/             # Workflow screenshots/images
-└── README.md           # Project documentation
+├── app.py                  # Streamlit frontend
+├── requirements.txt        # Python dependencies
+├── assets/                 # Images and workflow screenshots
+├── workflow.json           # Exported n8n workflow
+└── README.md               # Project documentation
 ```
 
 ---
 
 # 🚦 Getting Started
 
-## 1️⃣ Setup n8n Workflow
+## 1️⃣ Clone Repository
 
-- Import your workflow JSON into n8n
-- Configure your Groq API credentials
-- Set the Webhook node method to `POST`
+```bash
+git clone https://github.com/your-username/trend-content-generator.git
+cd trend-content-generator
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 3️⃣ Configure n8n
+
+- Import your `workflow.json` into n8n
+- Add your Groq API credentials
+- Configure Webhook node as `POST`
 - Copy the Production Webhook URL
 
 ---
 
-## 2️⃣ Setup Streamlit Frontend
+## 4️⃣ Configure Streamlit
 
-### Install Dependencies
-
-```bash
-pip install streamlit requests
-```
-
-### Configure Webhook URL
-
-Add your `N8N_URL` inside `app.py`.
-
-Example:
+Add your webhook URL inside `app.py`
 
 ```python
 N8N_URL = "YOUR_N8N_WEBHOOK_URL"
 ```
 
-### Run the App
+---
+
+## 5️⃣ Run Application
 
 ```bash
 streamlit run app.py
@@ -127,24 +140,23 @@ streamlit run app.py
 
 ---
 
-# 📸 Workflow Preview
+# 📸 Application Preview
 
+## 🔹 n8n Workflow
 
-
-Example:
-
-```markdown
-<img width="1920" height="1080" alt="Screenshot 2026-05-07 213256" src="https://github.com/user-attachments/assets/77251ade-b7f2-43cf-8af7-ef6cf302f0f4" />
-
-```
+![n8n Workflow](assets/n8n-workflow.png)
 
 ---
 
-# 🔐 Recommended Security Practice
+## 🔹 Streamlit Interface
 
-Instead of hardcoding your webhook URL, use **Streamlit Secrets Management**.
+![Streamlit UI](assets/streamlit-ui.png)
 
-Example:
+---
+
+# 🔐 Streamlit Secrets (Recommended)
+
+Instead of hardcoding URLs or API keys:
 
 ```python
 import streamlit as st
@@ -165,23 +177,25 @@ requests
 
 # 🧠 Future Improvements
 
-- AI image generation support
-- Auto-posting to social media
-- Multi-language content generation
-- Trend analytics dashboard
-- Content scheduling
+- 🎨 AI Image Generation
+- 📅 Social Media Scheduling
+- 🌍 Multi-language Support
+- 📊 Trend Analytics Dashboard
+- 🔥 Viral Score Prediction
+- 📱 Mobile Responsive UI
 
 ---
 
 # 📝 Author
 
 ### Charitha V.
-AI Automation Enthusiast | 2026
+
+AI Automation Enthusiast | AI Workflow Builder | 2026
 
 ---
 
 # ⭐ Support
 
-If you like this project, give it a ⭐ on GitHub.
+If you found this project useful, give it a ⭐ on GitHub.
 
 ---
