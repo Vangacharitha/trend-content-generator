@@ -145,13 +145,15 @@ streamlit run app.py
 
 ## 🔹 n8n Workflow
 
-![n8n Workflow](assets/n8n-workflow.png)
+![n8n Workflow](<img width="1920" height="1080" alt="Screenshot 2026-05-07 213256" src="https://github.com/user-attachments/assets/cbeb8db7-569c-4154-9313-a2aa9fffa0ee" />
+)
 
 ---
 
 ## 🔹 Streamlit Interface
 
-![Streamlit UI](assets/streamlit-ui.png)
+![Streamlit UI](<img width="1920" height="1020" alt="Screenshot 2026-05-07 214016" src="https://github.com/user-attachments/assets/0fa00705-cb74-4a42-8fd5-bc56ca1d33b8" />
+)
 
 ---
 
