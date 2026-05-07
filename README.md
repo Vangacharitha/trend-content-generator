@@ -129,12 +129,13 @@ streamlit run app.py
 
 # 📸 Workflow Preview
 
-> Add your n8n workflow screenshot inside the `assets/` folder and embed it here.
+
 
 Example:
 
 ```markdown
-![Workflow Preview](assets/workflow.png)
+<img width="1920" height="1080" alt="Screenshot 2026-05-07 213256" src="https://github.com/user-attachments/assets/77251ade-b7f2-43cf-8af7-ef6cf302f0f4" />
+
 ```
 
 ---
