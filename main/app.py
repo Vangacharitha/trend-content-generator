@@ -74,4 +74,4 @@ if st.button("🔄 Fetch Latest Trends & Generate Content", type="primary", use_
 
 # Footer for verification
 st.divider()
-st.caption("🚀 AI  | Live Trends v2.0")
+st.caption("🚀 AI content  | Live Trends v2.0")
