@@ -77,4 +77,4 @@ if st.button("🔄 Fetch Latest Trends & Generate Content", type="primary", use_
 
 # CLEAN FOOTER: No personal name included
 st.divider()
-st.caption("AI Content Factory | 2026")
+st.caption("🚀 AI Content Engine | Live Trends v2.0")
