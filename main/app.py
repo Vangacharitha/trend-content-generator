@@ -75,6 +75,6 @@ if st.button("🔄 Fetch Latest Trends & Generate Content", type="primary", use_
         except Exception as e:
             st.error(f"Unexpected error: {e}")
 
-CLEAN FOOTER: No personal name included
+# CLEAN FOOTER: No personal name included
 st.divider()
 st.caption("AI Content Factory | 2026")
